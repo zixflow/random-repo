@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Web App</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 2rem;
+      }
+
+      button {
+        padding: 0.5rem 0.75rem;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Simple Web App</h1>
+    <p id="count">Count: 0</p>
+    <button id="increment">Increment</button>
+
+    <script>
+      const count = document.getElementById('count');
+      const increment = document.getElementById('increment');
+      let value = 0;
+
+      increment.addEventListener('click', () => {
+        value += 1;
+        count.textContent = `Count: ${value}`;
+      });
+    </script>
+  </body>
+</html>
